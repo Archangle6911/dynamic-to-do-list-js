@@ -1,11 +1,10 @@
-// wait for the DOM ro fully load before running the script
-document.addEventLstener('DOMcontentLoaded',, () => {
-  // Select DOM elements 
-  const addButton = document.getElementById('add-task-btn');
-   const taskInput = document.getElementById('task-input');
-   const taskList = document.getElementById('task-list');
+// Wait for the DOM to fully load before running the script
+document.addEventListener('DOMContentLoaded', () => {
+    // Select DOM elements
+    const addButton = document.getElementById('add-task-btn');
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
 
-  
     // Load tasks from Local Storage
     function loadTasks() {
         const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
